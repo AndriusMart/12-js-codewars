@@ -1,10 +1,29 @@
 const min = function (list) {
-  return -110;
+  let minValue = list[0];
+  for (let i = 1; i < list.length; i++){
+    const item = list[i];
+    if (item < minValue) {
+      minValue = item;
+    }
+  }
+  return minValue;
 }
 
 const max = function (list) {
-  return 566;
+  let maxValue = list[0];
+
+  for (let i = 1; i < list.length; i++) {
+    const item = list[i];
+    if (item > maxValue) {
+      maxValue = item;
+    }
+  }
+  return maxValue;
 }
+/*
+const min = list => Math.min(...list);
+const max = list => Math.max(...list);
+*/
 
 describe("Test", function () {
 
